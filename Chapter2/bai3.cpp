@@ -1,22 +1,17 @@
 #include <iostream>
 using namespace std;
 
-float tinhTongPhanSo(float n)
-{
+float tinhTongPhanSo(float n) {
     float sum = 0;
-    for (float i = 1; i < n; i++)
-    {
+    for (float i = 1; i < n; i++) {
         sum += 1 / (float)i;
-        ;
     }
     return sum;
 }
 
-int main()
-{
+int main() {
     float n;
-    do
-    {
+    do {
         cout << "Nhap n: ";
         cin >> n;
     } while (n <= 0);

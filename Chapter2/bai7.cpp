@@ -6,6 +6,12 @@ void uochung(int n) {
     		cout << i << " " << endl;
 		}
 	}
+
+	// O(n)
+
+    // O(n/2)
+
+	// 1 2 3 | 4 6 12
 }
 
 int main() {
