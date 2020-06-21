@@ -31,11 +31,11 @@ bool thuanNghich(int n) {
     {
         return 0;
     }
-    
+
 }
 
 int main() {
-    // for (int i = 100000; i < 999999; i++)
+    // for (int i = 100000; i < 1000000; i++)
     // {
     //     if(thuanNghich(i) && tongCacSo(i)){
     //         cout<<"so thuan nghich: " <<i<<endl;
@@ -46,6 +46,8 @@ int main() {
         cout << "Nhap n: ";
         cin >> n;
     } while (n <= 0);
+
+
     if (thuanNghich(n) && tongCacSo(n))
     {
         cout<<"so thuan nghich";

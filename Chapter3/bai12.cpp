@@ -21,11 +21,34 @@ bool checkSNT(int n ){
     }
     return true;
 }
+
+bool checkDaySo(int n) {
+    for (int i = 1; i < n; i++)
+    {
+        int tam = 0;
+        while (n!=0)
+        {
+            tam = n%10;
+            n = n/10;
+            if (tam > n%10)
+            {
+                return false;
+            }else
+            {
+                return true;
+            }
+            
+        }
+        
+    }
+    
+    
+}
 int main() {
     int count =0, sum = 0;
     for (int i = 1000000; i < 9999999; i++)
     {
-        if(checkSNT(i) && checkSNT(tongCacSo(i))){
+        if(checkSNT(i) && checkDaySo(i) && checkSNT(tongCacSo(i))){
             cout<<"so nguyen to va tong cac chu so: "<<i<<endl;
         }
     }
