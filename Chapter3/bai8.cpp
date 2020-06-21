@@ -9,6 +9,8 @@ void soChan(int n) {
     }
     cout <<"dem so chan: " << count <<endl;
 }
+
+
 void soLe(int n) {
     int count = 0;
     for (int i = 0; i < n; i++){

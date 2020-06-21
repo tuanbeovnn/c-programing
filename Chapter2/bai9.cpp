@@ -1,6 +1,7 @@
 #include<iostream>
 #include<math.h>
 using namespace std;
+
 bool checkSNT(int n) {
     if (n == 0)
         return false;
