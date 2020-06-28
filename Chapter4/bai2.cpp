@@ -17,7 +17,7 @@ void xuat(int a[], int n)
     }
 }
 
-void sapXepTang(int a[], int n)
+void sapXepTang(int a[], int n)  //
 {
     int temp;
     for (int i = 0; i < n - 1; i++)
@@ -34,10 +34,12 @@ void sapXepTang(int a[], int n)
     }
 }
 
+
 void bubbleSort(int arr[], int n)
 {
     int i, j;
     bool haveSwap = false;
+
     for (i = 0; i < n-1; i++){
     // i phần tử cuối cùng đã được sắp xếp
         haveSwap = false;
@@ -63,7 +65,7 @@ int main()
     nhap(a, n);
     cout << "Xuat mang: " << endl;
     xuat(a, n);
-    sapXepTang(a, n);
+    bubbleSort(a, n);
     cout << "Xuat mang: " << endl;
     xuat(a, n);
     return 0;

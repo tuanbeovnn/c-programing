@@ -54,8 +54,12 @@ void dem(int a[], int n)
                     count++;
                 }
             }
+
+
             cout << "Phan tu " << a[i] << " : " << count << endl;
             count = 0;
+
+
             for (int k = 0; k < n; k++)
             {
                 if (a[k] == a[i])
@@ -63,7 +67,7 @@ void dem(int a[], int n)
                     tracking[k]=1;
                 }
             }
-            
+
         }
 
     }
