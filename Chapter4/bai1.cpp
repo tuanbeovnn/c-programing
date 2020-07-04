@@ -18,7 +18,7 @@ void xuat(int a[], int n) {
 }
 
 int soLonNhat(int a[], int n) {
-    int temp = 0;
+    int temp = a[0];
     for (int i = 0; i < n ; i++)
     {
         if (temp < a[i])
