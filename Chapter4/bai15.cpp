@@ -17,22 +17,22 @@ void xuat(int a[], int n)
     }
 }
 
-void sapXepTang(int a[], int n)  //
-{
-    int temp;
-    for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = i + 1; j < n; i++)
-        {
-            if (a[i] > a[j])
-            {
-                temp = a[i];
-                a[i] = a[j];
-                a[j] = temp;
-            }
-        }
-    }
-}
+// void sapXepTang(int a[], int n)  //
+// {
+//     int temp;
+//     for (int i = 0; i < n - 1; i++)
+//     {
+//         for (int j = i + 1; j < n; i++)
+//         {
+//             if (a[i] > a[j])
+//             {
+//                 temp = a[i];
+//                 a[i] = a[j];
+//                 a[j] = temp;
+//             }
+//         }
+//     }
+// }
 
 
 void bubbleSort(int arr[], int n)
@@ -66,7 +66,7 @@ int main()
     cout << "Xuat mang: " << endl;
     xuat(a, n);
     bubbleSort(a, n);
-    cout << "Xuat mang: " << endl;
+    cout << "Xuat mang sau khi sap xep: " << endl;
     xuat(a, n);
     return 0;
 }
