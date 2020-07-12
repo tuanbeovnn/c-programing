@@ -1,27 +1,58 @@
-#include <iostream>
-
+#include<iostream>
 using namespace std;
 
-void doiCho(int &a, int &b){
-    int temp = a;
-    a = b;
-    b = temp;
 
-    cout << "Step 2: Gia tri a, b - " << a << " , " << b << endl; // 7 4
+void nhap(int a[][20], int &m, int &n) {
+	cout << "Nhap vao m, n: ";
+	cin >> m >> n;
+
+	for(int i = 0; i < m; i ++){
+		for(int j = 0; j < n; j++ ){
+			cin >> a[i][j];
+		}
+	}
 }
 
-// truyen tham so, truyen tham tri
+void xuat(int a[][20], int m, int n) {
+	for(int i = 0; i < m; i ++){
+		for(int j = 0; j < n; j++ ){
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+	}	
+}
 
-int main(){
-    int a, b ;
-    cout << "Nhap vao a, b: ";
-    cin >> a >> b ;
+void getMaxMin(int a[][20], int &m, int &n) {
+	int max = a[0][0];
+	int min = a[0][0];
+	
+	
+	for(int i = 0; i < m; i ++){
+		for(int j = 0; j < n; j++ ){
+			if(a[i][j] > max){
+				max = a[i][j];
+			}
+			
+			if(a[i][j] < min){
+				min = a[i][j];
+			}
+			
+		}
+	}
+	
+		cout << "Max: " << max << endl;
+		cout << "Min: " << min << endl;
+}
+	
 
+int main() {
+	int a[10][20];
+	int n, m;
+	nhap(a, m,n);
+	cout << endl;
+	xuat(a, m,n);
+	cout << endl;
+	getMaxMin(a,m,n);
 
-    cout << "Step 1: Gia tri a, b - " << a << " , " << b << endl; // 4 7
-    doiCho(a, b);
-
-    cout << "Step 3: Gia tri a, b - " << a << " , " << b << endl; // 4 7  |  7 4
-
-    return 0;
+return 0;
 }

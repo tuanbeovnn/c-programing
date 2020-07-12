@@ -3,7 +3,6 @@ using namespace std;
 
 
 void nhap(int a[], int &n) {
-
     cout << "Nhap n: ";
     cin >> n;
 
