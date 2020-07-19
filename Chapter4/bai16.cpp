@@ -23,7 +23,28 @@ void xuat(int a[], int n)
 }
 
 int getPos(int a[], int value){
+    // 2 4  6 8 10 12
+    // 7
+
+    int pos = 0;
 	
+    /*while (true)
+    {
+        if(a[pos] > value ){
+            break;
+        }
+
+        pos ++;
+    }*/
+
+    
+    while(a[pos] < value){
+        pos ++;
+    }
+
+    
+    return pos;
+    
 }
 
 void add(int a[], int &n, int value, int position) 
