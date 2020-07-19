@@ -8,7 +8,10 @@ void nhap(int a[], int &n ) {
     cout << "Nhap n: ";
     cin >> n;
     int result[1000];
-    srand((int)time(0));
+    
+	srand((int)time(0));
+    
+    
     for (int i = 0; i < n; i++)
     {
         result[i] = rand()%100;

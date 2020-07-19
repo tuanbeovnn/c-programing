@@ -9,13 +9,18 @@ void nhap(int a[], int &n) {
 
     for (int i = 0; i < n; i++)
     {
-       cout << "Nhap vao phan tu a[" << i << "] : ";
+       //cout << "Nhap vao phan tu a[" << i << "] : ";
        cin >> a[i];
     }
 
 }
 
 void xuatHien(int a[], int b[], int n) {
+	
+	for(int i = 0; i < n; i++){
+		b[i] = 0;
+	}
+	
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
@@ -31,15 +36,19 @@ void xuatHien(int a[], int b[], int n) {
 }
 void xuat(int a[], int b[], int n) {
     int max = 0;
+
     for (int i = 0; i < n; i++)
     {
         if (b[i] > b[max])
         {
             max = i;
         }
-        
     }
-    cout<<"phan tu co so lan xuat hien: "<<a[i] <<" la: " << b[i] << endl;
+
+    
+    
+    cout << "Phan tu co so lan xuat hien nhieu la: " << a[max] << ". So luong la : " << b[max];
+
 }
 
 

@@ -37,7 +37,7 @@ void getMaxMin(int a[][20], int &m, int &n) {
 				min = a[i][j];
 			}
 			
-		}
+	
 	}
 	
 		cout << "Max: " << max << endl;

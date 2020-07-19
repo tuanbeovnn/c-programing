@@ -3,12 +3,11 @@ using namespace std;
 
 
 void nhap(int a[], int &n) {
-
     cout << "Nhap n: ";
     cin >> n;
 
     for (int i = 0; i < n; i++)
-    {
+	{
        cout << "Nhap vao phan tu a[" << i << "] : ";
        cin >> a[i];
     }
@@ -34,10 +33,14 @@ void tbc(int a[], int n) {
         if (a[i] > b && a[i] < c)
         {
             sum += a[i];
-            count++;
+            count ++;
         }
-        
     }
+    
+    
+    // 1 2 3 4 5 6 7 8 9 10 ==>> count = 1 
+    //  2 8
+    
     result = (float)sum / count;
     cout << " Tong tbc cua cac so trong khoang b & c: " << result << endl;
     
