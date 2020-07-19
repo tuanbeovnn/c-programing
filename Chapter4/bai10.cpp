@@ -30,24 +30,16 @@ void xuatHien(int a[], int b[], int n) {
     
 }
 void xuat(int a[], int b[], int n) {
-    int max = 1;
+    int max = 0;
     for (int i = 0; i < n; i++)
     {
-        if (b[i] > max)
+        if (b[i] > b[max])
         {
-            max = b[i];
-            break;
+            max = i;
         }
         
     }
-    for (int i = 0; i < n; i++)
-    {
-        if (b[i] == max)
-        {
-            cout<<"phan tu co so lan xuat hien: "<<a[i] <<" la: " << b[i] << endl;
-        }
-        
-    }
+    cout<<"phan tu co so lan xuat hien: "<<a[i] <<" la: " << b[i] << endl;
 }
 
 
