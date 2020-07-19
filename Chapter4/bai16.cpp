@@ -22,21 +22,8 @@ void xuat(int a[], int n)
     }
 }
 
-void sapXep(int a[], int n)
-{
-    int temp;
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = i + 1; j < n; j++)
-        {
-            if (a[i] > a[j])
-            {
-                temp = a[i];
-                a[i] = a[j];
-                a[j] = temp;
-            }
-        }
-    }
+int getPos(int a[], int value){
+	
 }
 
 void add(int a[], int &n, int value, int position) 
@@ -55,18 +42,17 @@ int main()
     int a[1000];
     int n;
     nhap(a, n);
-    cout << "them phan tu: " << endl;
+    
     int val, pos;
     cout << "Nhap so can them: " << endl;
     cin >> val;
-    cout << "Nhap vi tri: " << endl;
-    cin >> pos;
+    
+   	pos = getPos(a,val);
+   
     add(a,n,val,pos);
     cout<<"xuat mang sau khi them" << endl;
     xuat(a,n);
-    sapXep(a, n);
-    cout << "sap xep: " << endl;
-    xuat(a, n);
+    
     cout << endl;
     system("pause");
     return 0;
