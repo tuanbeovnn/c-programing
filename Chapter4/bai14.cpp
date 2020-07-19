@@ -23,55 +23,43 @@ void xuat(int a[], int n)
 }
 
 int getPos(int a[], int value){
-    // 2 4  6 8 10 12
-    // 7
-
-    int pos = 0;
 	
-    /*while (true)
-    {
-        if(a[pos] > value ){
-            break;
-        }
-
-        pos ++;
-    }*/
-
-    
-    while(a[pos] < value){
-        pos ++;
-    }
-
-    
-    return pos;
-    
 }
 
-void add(int a[], int &n, int value, int position) 
-{
-    for (int i = n-1; i >= position ; i--)
+void add(int a[], int &n, int b[], int m, int pos){
+	
+	int k = n + m;
+	
+    /*for (int i = n-1; i >= position ; i--)
     {
         a[i+1] = a[i];
-    }
+    }*/
     
-    a[position] = value;
-    n++;
+    for(int i = n + m - 1; i >= n - pos; i -- ){
+    	a[i] = a[i-m];
+	}
+	
+	int index = 0;
+	for(int i = pos; i < pos + m; i ++){
+		a[i] = b[index++];
+	}
     
+    n = k;
 }
 
 int main()
 {
-    int a[1000];
-    int n;
+    int a[100], b[100], n, m;
     nhap(a, n);
+    nhap(b, m);
     
-    int val, pos;
-    cout << "Nhap so can them: " << endl;
-    cin >> val;
+    int pos ;
+    cout << "Nhap vao vi tri: ";
+    cin >> pos;
     
-   	pos = getPos(a,val);
-   
-    add(a,n,val,pos);
+    
+    
+    add(a,n,b,m,pos);
     cout<<"xuat mang sau khi them" << endl;
     xuat(a,n);
     
@@ -79,3 +67,11 @@ int main()
     system("pause");
     return 0;
 }
+
+/*6 
+5 3 2 5 6 9
+
+4
+1 2 3 4
+
+2*/
