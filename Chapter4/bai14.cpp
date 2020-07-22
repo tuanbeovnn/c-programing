@@ -35,13 +35,19 @@ void add(int a[], int &n, int b[], int m, int pos){
         a[i+1] = a[i];
     }*/
     
-    for(int i = n + m - 1; i >= n - pos; i -- ){
+    for(int i = n + m - 1; i > pos + m - 1 ; i -- ){
     	a[i] = a[i-m];
 	}
 	
 	int index = 0;
-	for(int i = pos; i < pos + m; i ++){
+	/*for(int i = pos; i < pos + m; i ++){
 		a[i] = b[index++];
+	}*/
+	
+	index = pos;
+	for(int i = 0; i < m; i ++){
+		a[index] = b[i];
+		index ++;
 	}
     
     n = k;
